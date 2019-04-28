@@ -1,7 +1,6 @@
-export const newsTemplate = news => `
-   <li class="list-group-item">
-      <h2>${news.title}</h2>
-      <img src="${news.urlToImage}" alt="newsImage">
-      <p>${news.description}</p>
-   </li>
+let number = 0;
+export const newsTemplate = news =>`
+    <div class="item--${(number++)%6+1}">
+    <img src="${news.urlToImage}" alt="newsImage">
+    </div>
 `;
