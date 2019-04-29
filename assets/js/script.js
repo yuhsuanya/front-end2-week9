@@ -18,7 +18,7 @@ const getSocialNews = async () => {
 
 const getEntertainmentNews = async () => {
     try {
-      let resp = await gNews("/everything?q=Entertainment");
+      let resp = await gNews("/everything?q=entertainment");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
       $("#entertainmentNews").html(newsList);
     } catch (error){
@@ -28,9 +28,9 @@ const getEntertainmentNews = async () => {
 
   const getSportNews = async () => {
     try {
-      let resp = await gNews("/everything?q=Sport");
+      let resp = await gNews("/everything?q=sport");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
-      $("#SportNews").html(newsList);
+      $("#sportNews").html(newsList);
     } catch (error){
       console.log(error);
     }
@@ -38,9 +38,9 @@ const getEntertainmentNews = async () => {
 
   const getTaiwanNews = async () => {
     try {
-      let resp = await gNews("/everything?q=Taiwan");
+      let resp = await gNews("/everything?q=taiwan");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
-      $("#TaiwanNews").html(newsList);
+      $("#taiwanNews").html(newsList);
     } catch (error){
       console.log(error);
     }
