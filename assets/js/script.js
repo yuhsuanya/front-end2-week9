@@ -1,9 +1,10 @@
-import "normalize.css";
 import "babel-polyfill";
 import $ from "jquery";
+import "normalize.css";
 import "../css/style.css";
 import gNews from "./modules/gNews";
 import { newsTemplate } from "./modules/template";
+
 
 
 const getSocialNews = async () => {
