@@ -1,3 +1,4 @@
+import "normalize.css";
 import "babel-polyfill";
 import $ from "jquery";
 import "../css/style.css";
@@ -7,11 +8,7 @@ import { newsTemplate } from "./modules/template";
 
 const getSocialNews = async () => {
     try {
-        let resp = await gNews("/everything?q=social",{
-          headers:{
-            Authorization:0755655e274647799acbf14048874587
-          }
-        });
+    let resp = await gNews("/everything?q=social");
     let newsList = resp.data.articles.map(news => newsTemplate(news));
     $("#socialNews").html(newsList);
   } catch (error){
@@ -21,11 +18,7 @@ const getSocialNews = async () => {
 
 const getEntertainmentNews = async () => {
     try {
-        let resp = await gNews("/everything?q=Entertainment",{
-          headers:{
-            Authorization:0755655e274647799acbf14048874587
-          }
-        });
+      let resp = await gNews("/everything?q=Entertainment");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
       $("#entertainmentNews").html(newsList);
     } catch (error){
@@ -35,13 +28,9 @@ const getEntertainmentNews = async () => {
 
   const getSportNews = async () => {
     try {
-        let resp = await gNews("/everything?q=Sport",{
-          headers:{
-            Authorization:0755655e274647799acbf14048874587
-          }
-        });
+      let resp = await gNews("/everything?q=Sport");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
-      $("SportNews").html(newsList);
+      $("#SportNews").html(newsList);
     } catch (error){
       console.log(error);
     }
@@ -49,11 +38,7 @@ const getEntertainmentNews = async () => {
 
   const getTaiwanNews = async () => {
     try {
-        let resp = await gNews("/everything?q=Taiwan",{
-          headers:{
-            Authorization:0755655e274647799acbf14048874587
-          }
-        });
+      let resp = await gNews("/everything?q=Taiwan");
       let newsList = resp.data.articles.map(news => newsTemplate(news));
       $("#TaiwanNews").html(newsList);
     } catch (error){
