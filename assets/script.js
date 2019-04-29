@@ -1,7 +1,8 @@
 import "babel-polyfill";
 import $ from "jquery";
-import gNews from './modules/gNews';
-import { newsTemplate } from './modules/template';
+import "../css/style.css";
+import gNews from "./modules/gNews";
+import { newsTemplate } from "./modules/template";
 
 
 const getSocialNews = async () => {
